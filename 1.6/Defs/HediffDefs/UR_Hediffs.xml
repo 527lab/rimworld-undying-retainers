@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef>
+    <defName>UR_RetainerContract</defName>
+    <label>retainer contract</label>
+    <description>This person was raised from death and is bound to serve the colony.</description>
+    <hediffClass>UndyingRetainers.Hediff_RetainerContract</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <makesAlert>false</makesAlert>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <defaultLabelColor>(0.6, 0.8, 1)</defaultLabelColor>
+  </HediffDef>
+
+  <HediffDef Name="UR_NeedDisablerBase" Abstract="True">
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <makesAlert>false</makesAlert>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <defaultLabelColor>(0.6, 0.8, 1)</defaultLabelColor>
+  </HediffDef>
+
+  <HediffDef ParentName="UR_NeedDisablerBase">
+    <defName>UR_NoFood</defName>
+    <label>needs no food</label>
+    <description>Retainer: does not need to eat.</description>
+    <stages><li><disablesNeeds><li>Food</li></disablesNeeds></li></stages>
+  </HediffDef>
+
+  <HediffDef ParentName="UR_NeedDisablerBase">
+    <defName>UR_NoRest</defName>
+    <label>needs no rest</label>
+    <description>Retainer: does not need to sleep.</description>
+    <stages><li><disablesNeeds><li>Rest</li></disablesNeeds></li></stages>
+  </HediffDef>
+
+  <HediffDef ParentName="UR_NeedDisablerBase">
+    <defName>UR_NoJoy</defName>
+    <label>needs no recreation</label>
+    <description>Retainer: does not need recreation.</description>
+    <stages><li><disablesNeeds><li>Joy</li></disablesNeeds></li></stages>
+  </HediffDef>
+
+  <HediffDef ParentName="UR_NeedDisablerBase">
+    <defName>UR_NoMood</defName>
+    <label>no mood</label>
+    <description>Retainer: has no mood and never suffers mental breaks from it.</description>
+    <stages><li><disablesNeeds><li>Mood</li></disablesNeeds></li></stages>
+  </HediffDef>
+
+  <HediffDef ParentName="UR_NeedDisablerBase">
+    <defName>UR_Undying</defName>
+    <label>undying</label>
+    <description>Retainer: fatal wounds do not kill; the body reforms instead.</description>
+    <preventsDeath>true</preventsDeath>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>UR_Reforming</defName>
+    <label>reforming</label>
+    <description>The body is reforming after a fatal wound. When complete, wounds, missing parts and blood loss are restored.</description>
+    <hediffClass>UndyingRetainers.Hediff_Reforming</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <makesAlert>false</makesAlert>
+    <tendable>false</tendable>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <defaultLabelColor>(0.6, 0.8, 1)</defaultLabelColor>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.01</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

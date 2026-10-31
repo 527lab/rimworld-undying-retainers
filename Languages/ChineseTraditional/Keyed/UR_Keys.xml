@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <UR_Command_Raise>復活為家臣</UR_Command_Raise>
+  <UR_Command_RaiseDesc>將此人從死亡中喚醒，成為殖民地忠誠的家臣。</UR_Command_RaiseDesc>
+  <UR_Message_Raised>{0} 已復活，成為殖民地的家臣。</UR_Message_Raised>
+  <UR_Message_RaiseFailed>無法復活 {0}。</UR_Message_RaiseFailed>
+  <UR_Settings_NeedsHeader>家臣需求（勾選＝家臣「沒有」此需求）</UR_Settings_NeedsHeader>
+  <UR_Settings_NoFood>無需進食</UR_Settings_NoFood>
+  <UR_Settings_NoRest>無需睡眠</UR_Settings_NoRest>
+  <UR_Settings_NoJoy>無需娛樂</UR_Settings_NoJoy>
+  <UR_Settings_NoMood>無心情</UR_Settings_NoMood>
+  <UR_Settings_ReformDays>致命傷後重組天數：{0}</UR_Settings_ReformDays>
+  <UR_Settings_Undying>不朽：致命傷改為倒地重組</UR_Settings_Undying>
+  <UR_Message_Reforming>{0} 受到致命傷，開始重組（需 {1}）。</UR_Message_Reforming>
+  <UR_Message_Reformed>{0} 已重組完成，重新為家族效力。</UR_Message_Reformed>
+  <UR_NoMap>請先進入地圖。</UR_NoMap>
+  <UR_Summon_Title>招魂：選擇屍體</UR_Summon_Title>
+  <UR_Summon_Area>範圍</UR_Summon_Area>
+  <UR_Summon_WholeMap>整張地圖</UR_Summon_WholeMap>
+  <UR_Summon_Gender>性別</UR_Summon_Gender>
+  <UR_Gender_0>不限</UR_Gender_0>
+  <UR_Gender_1>男</UR_Gender_1>
+  <UR_Gender_2>女</UR_Gender_2>
+  <UR_Summon_Age>年齡：{0} ～ {1} 歲</UR_Summon_Age>
+  <UR_Summon_All>全選</UR_Summon_All>
+  <UR_Summon_None>全不選</UR_Summon_None>
+  <UR_Summon_Found>符合條件的屍體：{0} 具</UR_Summon_Found>
+  <UR_Summon_Raise>復活選取的 {0} 具屍體</UR_Summon_Raise>
+  <UR_Profile_Title>復活後設定</UR_Profile_Title>
+  <UR_Profile_SkillMode>技能</UR_Profile_SkillMode>
+  <UR_SkillMode_0>保持原樣</UR_SkillMode_0>
+  <UR_SkillMode_1>全部設為同一等級</UR_SkillMode_1>
+  <UR_SkillMode_2>逐項設定</UR_SkillMode_2>
+  <UR_Profile_AllSkills>所有技能等級：{0}</UR_Profile_AllSkills>
+  <UR_Profile_Keep>保持</UR_Profile_Keep>
+  <UR_Profile_Work>復活後要做的工作（勾選＝做，取消＝不做；角色本身無法做的工作不受影響）</UR_Profile_Work>
+  <UR_None>無</UR_None>
+  <UR_Contract_Master>主人 {0}</UR_Contract_Master>
+  <UR_Gizmo_Master>主人：{0}</UR_Gizmo_Master>
+  <UR_Gizmo_MasterDesc>指定此家臣效忠的主人。</UR_Gizmo_MasterDesc>
+  <UR_Gizmo_Household>家族：{0}</UR_Gizmo_Household>
+  <UR_Gizmo_HouseholdDesc>指定此家臣所屬的家族，可建立或重新命名家族。</UR_Gizmo_HouseholdDesc>
+  <UR_Household_New>建立新家族…</UR_Household_New>
+  <UR_Household_Rename>重新命名「{0}」…</UR_Household_Rename>
+  <UR_Household_Default>家族 {0}</UR_Household_Default>
+  <UR_Summon_Master>主人</UR_Summon_Master>
+  <UR_Summon_Household>加入家族</UR_Summon_Household>
+  <UR_Section_Belong>歸屬</UR_Section_Belong>
+  <UR_Profile_KeepHint>復活後技能維持生前的等級。</UR_Profile_KeepHint>
+  <UR_Profile_AllSkillsShort>所有技能</UR_Profile_AllSkillsShort>
+  <UR_Profile_AllKeep>全部保持</UR_Profile_AllKeep>
+  <UR_Profile_WorkShort>復活後要做的工作</UR_Profile_WorkShort>
+  <UR_Profile_WorkHint>點一下切換；按住滑鼠拖過多個方塊可一次開啟或關閉。綠色＝做。</UR_Profile_WorkHint>
+  <UR_Roster_Title>家臣名冊（{0} 名，重組中 {1} 名）</UR_Roster_Title>
+  <UR_Roster_All>全部</UR_Roster_All>
+  <UR_Roster_Shown>顯示 {0} 名，已選 {1} 名</UR_Roster_Shown>
+  <UR_Roster_SetMaster>指定主人…</UR_Roster_SetMaster>
+  <UR_Roster_SetHousehold>加入家族…</UR_Roster_SetHousehold>
+  <UR_Roster_ApplyWork>套用工作設定</UR_Roster_ApplyWork>
+  <UR_Roster_ApplyWorkDesc>把「招魂」視窗裡的「復活後要做的工作」套用到選取的家臣（不會改技能）。</UR_Roster_ApplyWorkDesc>
+  <UR_Roster_WorkApplied>已套用工作設定到 {0} 名家臣。</UR_Roster_WorkApplied>
+  <UR_Roster_Draft>徵召</UR_Roster_Draft>
+  <UR_Roster_Undraft>解除徵召</UR_Roster_Undraft>
+  <UR_Roster_Col_Name>名字</UR_Roster_Col_Name>
+  <UR_Roster_Col_Status>狀態</UR_Roster_Col_Status>
+  <UR_Roster_Col_Job>目前在做</UR_Roster_Col_Job>
+  <UR_Roster_Reforming>重組中（剩 {0}）</UR_Roster_Reforming>
+  <UR_Roster_Downed>倒地</UR_Roster_Downed>
+  <UR_Roster_Drafted>已徵召</UR_Roster_Drafted>
+  <UR_Roster_Caravan>商隊中</UR_Roster_Caravan>
+  <UR_Roster_Here>本地圖</UR_Roster_Here>
+  <UR_Roster_Away>不在地圖上</UR_Roster_Away>
+  <UR_Roster_JumpTip>點名字：鏡頭移到此家臣並選取</UR_Roster_JumpTip>
+  <UR_Profile_PerSkillHint>點擊或拖曳長條設定等級，↺ 改回保持原樣。</UR_Profile_PerSkillHint>
+  <UR_Tab_Roster>家臣名冊</UR_Tab_Roster>
+  <UR_Tab_Summon>招魂</UR_Tab_Summon>
+</LanguageData>

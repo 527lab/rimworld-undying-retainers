@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <UR_Settings_Bond>Household bond: bonuses when household members and master are present</UR_Settings_Bond>
+  <UR_Settings_BondDesc>The more household retainers (plus the master) present on the same map, the higher the work speed, move speed and combat bonus, up to three levels.</UR_Settings_BondDesc>
+  <UR_Settings_MasterRescue>Retainers rescue their downed master</UR_Settings_MasterRescue>
+  <UR_Settings_MasterRescueDesc>When the master is downed and not in a bed, the nearest retainer carries them to a bed.</UR_Settings_MasterRescueDesc>
+  <UR_Settings_MasterDraftFollow>Retainers are drafted along with their master</UR_Settings_MasterDraftFollow>
+  <UR_Settings_MasterDraftFollowDesc>At the moment the master is drafted or undrafted, retainers on the same map follow.</UR_Settings_MasterDraftFollowDesc>
+</LanguageData>

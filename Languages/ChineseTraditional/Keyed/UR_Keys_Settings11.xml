@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <UR_Settings_Bond>家族羈絆：同家族成員與主人在場時給予加成</UR_Settings_Bond>
+  <UR_Settings_BondDesc>同一張地圖上的同家族家臣（加上在場的主人）越多，工作速度、移動速度與戰鬥能力加成越高，最高三級。</UR_Settings_BondDesc>
+  <UR_Settings_MasterRescue>主人倒地時，家臣前去救援</UR_Settings_MasterRescue>
+  <UR_Settings_MasterRescueDesc>主人倒地且不在床上時，名下最近的家臣會把主人搬去床上。</UR_Settings_MasterRescueDesc>
+  <UR_Settings_MasterDraftFollow>主人被徵召時，名下家臣一起徵召</UR_Settings_MasterDraftFollow>
+  <UR_Settings_MasterDraftFollowDesc>主人徵召或解除徵召的那一刻，同一張地圖上名下的家臣會一起徵召或解除。</UR_Settings_MasterDraftFollowDesc>
+</LanguageData>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <MainButtonDef>
+    <defName>UR_Retainers</defName>
+    <label>retainers</label>
+    <description>Undying Retainers: roster of all retainers, and raising corpses with filters and settings.</description>
+    <tabWindowClass>UndyingRetainers.MainTabWindow_Retainers</tabWindowClass>
+    <order>96</order>
+  </MainButtonDef>
+</Defs>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef>
+    <defName>UR_HouseholdBond</defName>
+    <label>household bond</label>
+    <description>Retainers of the same household, and their master, fight and work better when together. Level I: +5% work speed, +3% move speed, +1% shooting accuracy, melee hit chance and melee dodge. Level II: +10%, +6%, +2%. Level III: +15%, +10%, +3%.</description>
+    <hediffClass>UndyingRetainers.Hediff_Bond</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <makesAlert>false</makesAlert>
+    <tendable>false</tendable>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <defaultLabelColor>(0.6, 0.8, 1)</defaultLabelColor>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>3</maxSeverity>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <label>I</label>
+        <statFactors>
+          <WorkSpeedGlobal>1.05</WorkSpeedGlobal>
+          <MoveSpeed>1.03</MoveSpeed>
+        </statFactors>
+        <statOffsets>
+          <ShootingAccuracyPawn>0.01</ShootingAccuracyPawn>
+          <MeleeHitChance>0.01</MeleeHitChance>
+          <MeleeDodgeChance>0.01</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.5</minSeverity>
+        <label>II</label>
+        <statFactors>
+          <WorkSpeedGlobal>1.10</WorkSpeedGlobal>
+          <MoveSpeed>1.06</MoveSpeed>
+        </statFactors>
+        <statOffsets>
+          <ShootingAccuracyPawn>0.02</ShootingAccuracyPawn>
+          <MeleeHitChance>0.02</MeleeHitChance>
+          <MeleeDodgeChance>0.02</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>2.5</minSeverity>
+        <label>III</label>
+        <statFactors>
+          <WorkSpeedGlobal>1.15</WorkSpeedGlobal>
+          <MoveSpeed>1.10</MoveSpeed>
+        </statFactors>
+        <statOffsets>
+          <ShootingAccuracyPawn>0.03</ShootingAccuracyPawn>
+          <MeleeHitChance>0.03</MeleeHitChance>
+          <MeleeDodgeChance>0.03</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

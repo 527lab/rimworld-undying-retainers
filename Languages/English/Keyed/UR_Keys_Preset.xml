@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <UR_Preset_Section>Presets</UR_Preset_Section>
+  <UR_Preset_Label>Preset: {0}</UR_Preset_Label>
+  <UR_Preset_None>None selected</UR_Preset_None>
+  <UR_Preset_Modified> (modified)</UR_Preset_Modified>
+  <UR_Preset_DefaultName>Preset {0}</UR_Preset_DefaultName>
+  <UR_Preset_SaveNew>+ Save current settings as new preset...</UR_Preset_SaveNew>
+  <UR_Preset_Overwrite>Overwrite "{0}" with current settings</UR_Preset_Overwrite>
+  <UR_Preset_Rename>Rename "{0}"...</UR_Preset_Rename>
+  <UR_Preset_Delete>Delete "{0}"...</UR_Preset_Delete>
+  <UR_Preset_DeleteConfirm>Delete preset "{0}"?</UR_Preset_DeleteConfirm>
+  <UR_Preset_NoneSaved>No presets saved yet. Configure the Raise tab first, then save it as a preset.</UR_Preset_NoneSaved>
+  <UR_Roster_ApplyPresetWork>Apply preset work...</UR_Roster_ApplyPresetWork>
+  <UR_Roster_ApplyPresetWorkDesc>Apply the chosen preset's work settings to the selected retainers (skills and the current raise settings are not changed).</UR_Roster_ApplyPresetWorkDesc>
+</LanguageData>

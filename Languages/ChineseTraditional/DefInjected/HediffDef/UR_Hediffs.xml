@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <UR_RetainerContract.label>家臣契約</UR_RetainerContract.label>
+  <UR_RetainerContract.description>此人從死亡中被喚醒，效忠於殖民地。</UR_RetainerContract.description>
+  <UR_NoFood.label>無需進食</UR_NoFood.label>
+  <UR_NoFood.description>家臣：不需要進食。</UR_NoFood.description>
+  <UR_NoRest.label>無需睡眠</UR_NoRest.label>
+  <UR_NoRest.description>家臣：不需要睡眠。</UR_NoRest.description>
+  <UR_NoJoy.label>無需娛樂</UR_NoJoy.label>
+  <UR_NoJoy.description>家臣：不需要娛樂。</UR_NoJoy.description>
+  <UR_NoMood.label>無心情</UR_NoMood.label>
+  <UR_NoMood.description>家臣：沒有心情，不會因心情而精神崩潰。</UR_NoMood.description>
+  <UR_Undying.label>不朽</UR_Undying.label>
+  <UR_Undying.description>家臣：致命傷不會致死，身體會重組。</UR_Undying.description>
+  <UR_Reforming.label>重組中</UR_Reforming.label>
+  <UR_Reforming.description>致命傷後身體正在重組。完成時會修復傷口、缺失部位與失血。</UR_Reforming.description>
+</LanguageData>

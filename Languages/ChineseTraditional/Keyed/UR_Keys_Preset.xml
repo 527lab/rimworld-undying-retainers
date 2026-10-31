@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <UR_Preset_Section>預設組</UR_Preset_Section>
+  <UR_Preset_Label>預設組：{0}</UR_Preset_Label>
+  <UR_Preset_None>未選擇</UR_Preset_None>
+  <UR_Preset_Modified>（已修改）</UR_Preset_Modified>
+  <UR_Preset_DefaultName>預設組 {0}</UR_Preset_DefaultName>
+  <UR_Preset_SaveNew>＋ 將目前設定存為新預設組…</UR_Preset_SaveNew>
+  <UR_Preset_Overwrite>用目前設定覆寫「{0}」</UR_Preset_Overwrite>
+  <UR_Preset_Rename>重新命名「{0}」…</UR_Preset_Rename>
+  <UR_Preset_Delete>刪除「{0}」…</UR_Preset_Delete>
+  <UR_Preset_DeleteConfirm>確定要刪除預設組「{0}」嗎？</UR_Preset_DeleteConfirm>
+  <UR_Preset_NoneSaved>尚未儲存任何預設組。請先在「招魂」分頁設定後存成預設組。</UR_Preset_NoneSaved>
+  <UR_Roster_ApplyPresetWork>套用預設組工作…</UR_Roster_ApplyPresetWork>
+  <UR_Roster_ApplyPresetWorkDesc>把選定預設組的工作設定套用到所選家臣（不會改技能，也不會改目前的招魂設定）。</UR_Roster_ApplyPresetWorkDesc>
+</LanguageData>

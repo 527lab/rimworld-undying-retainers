@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <UR_Command_Raise>Raise as retainer</UR_Command_Raise>
+  <UR_Command_RaiseDesc>Bring this person back from death as a loyal retainer of your colony.</UR_Command_RaiseDesc>
+  <UR_Message_Raised>{0} has risen as a retainer of your colony.</UR_Message_Raised>
+  <UR_Message_RaiseFailed>Could not raise {0}.</UR_Message_RaiseFailed>
+  <UR_Settings_NeedsHeader>Retainer needs (checked = retainers do NOT have this need)</UR_Settings_NeedsHeader>
+  <UR_Settings_NoFood>No food</UR_Settings_NoFood>
+  <UR_Settings_NoRest>No sleep</UR_Settings_NoRest>
+  <UR_Settings_NoJoy>No recreation</UR_Settings_NoJoy>
+  <UR_Settings_NoMood>No mood</UR_Settings_NoMood>
+  <UR_Settings_ReformDays>Days to reform after a fatal wound: {0}</UR_Settings_ReformDays>
+  <UR_Settings_Undying>Undying: fatal wounds become reforming</UR_Settings_Undying>
+  <UR_Message_Reforming>{0} suffered a fatal wound and is reforming ({1}).</UR_Message_Reforming>
+  <UR_Message_Reformed>{0} has finished reforming and returns to service.</UR_Message_Reformed>
+  <UR_NoMap>Enter a map first.</UR_NoMap>
+  <UR_Summon_Title>Raise: choose corpses</UR_Summon_Title>
+  <UR_Summon_Area>Area</UR_Summon_Area>
+  <UR_Summon_WholeMap>Whole map</UR_Summon_WholeMap>
+  <UR_Summon_Gender>Gender</UR_Summon_Gender>
+  <UR_Gender_0>Any</UR_Gender_0>
+  <UR_Gender_1>Male</UR_Gender_1>
+  <UR_Gender_2>Female</UR_Gender_2>
+  <UR_Summon_Age>Age: {0} - {1}</UR_Summon_Age>
+  <UR_Summon_All>Select all</UR_Summon_All>
+  <UR_Summon_None>Select none</UR_Summon_None>
+  <UR_Summon_Found>Matching corpses: {0}</UR_Summon_Found>
+  <UR_Summon_Raise>Raise {0} selected corpses</UR_Summon_Raise>
+  <UR_Profile_Title>After raising</UR_Profile_Title>
+  <UR_Profile_SkillMode>Skills</UR_Profile_SkillMode>
+  <UR_SkillMode_0>Keep as is</UR_SkillMode_0>
+  <UR_SkillMode_1>Set all to one level</UR_SkillMode_1>
+  <UR_SkillMode_2>Set each skill</UR_SkillMode_2>
+  <UR_Profile_AllSkills>All skills level: {0}</UR_Profile_AllSkills>
+  <UR_Profile_Keep>Keep</UR_Profile_Keep>
+  <UR_Profile_Work>Work after raising (checked = do, unchecked = do not; work the pawn is incapable of is unaffected)</UR_Profile_Work>
+  <UR_None>None</UR_None>
+  <UR_Contract_Master>master {0}</UR_Contract_Master>
+  <UR_Gizmo_Master>Master: {0}</UR_Gizmo_Master>
+  <UR_Gizmo_MasterDesc>Choose the master this retainer serves.</UR_Gizmo_MasterDesc>
+  <UR_Gizmo_Household>Household: {0}</UR_Gizmo_Household>
+  <UR_Gizmo_HouseholdDesc>Choose this retainer's household, or create / rename one.</UR_Gizmo_HouseholdDesc>
+  <UR_Household_New>New household...</UR_Household_New>
+  <UR_Household_Rename>Rename "{0}"...</UR_Household_Rename>
+  <UR_Household_Default>Household {0}</UR_Household_Default>
+  <UR_Summon_Master>Master</UR_Summon_Master>
+  <UR_Summon_Household>Household</UR_Summon_Household>
+  <UR_Section_Belong>Belongs to</UR_Section_Belong>
+  <UR_Profile_KeepHint>Skills stay at their level from life.</UR_Profile_KeepHint>
+  <UR_Profile_AllSkillsShort>All skills</UR_Profile_AllSkillsShort>
+  <UR_Profile_AllKeep>Keep all</UR_Profile_AllKeep>
+  <UR_Profile_WorkShort>Work after raising</UR_Profile_WorkShort>
+  <UR_Profile_WorkHint>Click to toggle; press and drag across tiles to switch many at once. Green = do.</UR_Profile_WorkHint>
+  <UR_Roster_Title>Retainer roster ({0}, reforming {1})</UR_Roster_Title>
+  <UR_Roster_All>All</UR_Roster_All>
+  <UR_Roster_Shown>Showing {0}, selected {1}</UR_Roster_Shown>
+  <UR_Roster_SetMaster>Set master...</UR_Roster_SetMaster>
+  <UR_Roster_SetHousehold>Set household...</UR_Roster_SetHousehold>
+  <UR_Roster_ApplyWork>Apply work settings</UR_Roster_ApplyWork>
+  <UR_Roster_ApplyWorkDesc>Apply the "work after raising" settings from the raise window to the selected retainers (skills unchanged).</UR_Roster_ApplyWorkDesc>
+  <UR_Roster_WorkApplied>Applied work settings to {0} retainers.</UR_Roster_WorkApplied>
+  <UR_Roster_Draft>Draft</UR_Roster_Draft>
+  <UR_Roster_Undraft>Undraft</UR_Roster_Undraft>
+  <UR_Roster_Col_Name>Name</UR_Roster_Col_Name>
+  <UR_Roster_Col_Status>Status</UR_Roster_Col_Status>
+  <UR_Roster_Col_Job>Doing</UR_Roster_Col_Job>
+  <UR_Roster_Reforming>Reforming ({0} left)</UR_Roster_Reforming>
+  <UR_Roster_Downed>Downed</UR_Roster_Downed>
+  <UR_Roster_Drafted>Drafted</UR_Roster_Drafted>
+  <UR_Roster_Caravan>In caravan</UR_Roster_Caravan>
+  <UR_Roster_Here>This map</UR_Roster_Here>
+  <UR_Roster_Away>Away</UR_Roster_Away>
+  <UR_Roster_JumpTip>Click name: jump to and select this retainer</UR_Roster_JumpTip>
+  <UR_Profile_PerSkillHint>Click or drag a bar to set the level; ↺ resets to keep.</UR_Profile_PerSkillHint>
+  <UR_Tab_Roster>Roster</UR_Tab_Roster>
+  <UR_Tab_Summon>Raise</UR_Tab_Summon>
+</LanguageData>
