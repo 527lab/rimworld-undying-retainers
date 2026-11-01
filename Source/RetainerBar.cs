@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -11,9 +12,6 @@ namespace UndyingRetainers
     /// </summary>
     public static class RetainerBar
     {
-        // True only while ColonistBar.CheckRecacheEntries is running; the Sort postfix filters only then.
-        public static bool InRecache;
-
         private static int lastSignature;
         private static bool warned;
 
@@ -48,14 +46,17 @@ namespace UndyingRetainers
             return p.health != null && p.health.HasHediffsNeedingTend(false);
         }
 
-        /// <summary>Remove hidden retainers from a pawn list (in place).</summary>
-        public static void Filter(List<Pawn> pawns)
+        /// <summary>
+        /// Replaces the PlayerPawnsDisplayOrderUtility.Sort calls inside ColonistBar.CheckRecacheEntries:
+        /// sort as vanilla does, then drop hidden retainers before the bar builds its entries.
+        /// </summary>
+        public static void SortAndFilter(List<Pawn> pawns)
         {
-            if (pawns == null)
+            PlayerPawnsDisplayOrderUtility.Sort(pawns);
+            if (pawns != null)
             {
-                return;
+                pawns.RemoveAll(p => !ShouldShow(p));
             }
-            pawns.RemoveAll(p => !ShouldShow(p));
         }
 
         /// <summary>
@@ -85,7 +86,7 @@ namespace UndyingRetainers
             Verify();
         }
 
-        // If a hidden retainer still shows up in the bar, our patch target is wrong: say so once in the log.
+        // If a hidden retainer still shows up in the bar, the patch did not take effect: say so once in the log.
         private static void Verify()
         {
             if (warned)
@@ -98,20 +99,27 @@ namespace UndyingRetainers
                 {
                     warned = true;
                     Log.Warning("[UndyingRetainers] Colonist bar filter is not effective: a hidden retainer is still listed. "
-                        + "The patched method may differ in this RimWorld version; please report this log line.");
+                        + "Another mod may rebuild the colonist bar; please report this log line.");
                     return;
                 }
             }
         }
     }
 
-    // Patch 1: mark the span in which the colonist bar rebuilds its entries.
+    // Swap the Sort calls in ColonistBar.CheckRecacheEntries for RetainerBar.SortAndFilter.
+    // A transpiler is used because Sort is a one-line method the JIT may inline, which would skip a postfix.
     [HarmonyPatch]
     public static class Patch_ColonistBar_CheckRecacheEntries
     {
+        private static readonly MethodInfo SortMethod =
+            AccessTools.Method(typeof(PlayerPawnsDisplayOrderUtility), nameof(PlayerPawnsDisplayOrderUtility.Sort), new[] { typeof(List<Pawn>) });
+
+        private static readonly MethodInfo Replacement =
+            AccessTools.Method(typeof(RetainerBar), nameof(RetainerBar.SortAndFilter));
+
         public static bool Prepare()
         {
-            bool ok = TargetMethod() != null;
+            bool ok = TargetMethod() != null && SortMethod != null && Replacement != null;
             if (!ok)
             {
                 Log.Warning("[UndyingRetainers] ColonistBar.CheckRecacheEntries not found; retainer colonist bar filter disabled.");
@@ -119,47 +127,32 @@ namespace UndyingRetainers
             return ok;
         }
 
-        public static System.Reflection.MethodBase TargetMethod()
+        public static MethodBase TargetMethod()
         {
             return AccessTools.Method(typeof(ColonistBar), "CheckRecacheEntries");
         }
 
-        public static void Prefix()
+        public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
-            RetainerBar.InRecache = true;
-        }
-
-        public static void Finalizer()
-        {
-            RetainerBar.InRecache = false;
-        }
-    }
-
-    // Patch 2: the bar sorts its pawn list before laying out; drop hidden retainers there so layout stays consistent.
-    [HarmonyPatch]
-    public static class Patch_PlayerPawnsDisplayOrder_Sort
-    {
-        public static bool Prepare()
-        {
-            bool ok = TargetMethod() != null && Patch_ColonistBar_CheckRecacheEntries.TargetMethod() != null;
-            if (!ok)
+            var list = new List<CodeInstruction>(instructions);
+            int replaced = 0;
+            foreach (CodeInstruction ci in list)
             {
-                Log.Warning("[UndyingRetainers] PlayerPawnsDisplayOrderUtility.Sort not found; retainer colonist bar filter disabled.");
+                if (ci.Calls(SortMethod))
+                {
+                    ci.operand = Replacement;
+                    replaced++;
+                }
             }
-            return ok;
-        }
-
-        public static System.Reflection.MethodBase TargetMethod()
-        {
-            return AccessTools.Method(typeof(PlayerPawnsDisplayOrderUtility), "Sort", new[] { typeof(List<Pawn>) });
-        }
-
-        public static void Postfix(List<Pawn> __0)
-        {
-            if (RetainerBar.InRecache)
+            if (replaced == 0)
             {
-                RetainerBar.Filter(__0);
+                Log.Warning("[UndyingRetainers] No Sort call found in ColonistBar.CheckRecacheEntries; retainer colonist bar filter disabled.");
             }
+            else
+            {
+                Log.Message("[UndyingRetainers] Colonist bar filter active (" + replaced + " call sites).");
+            }
+            return list;
         }
     }
 }
