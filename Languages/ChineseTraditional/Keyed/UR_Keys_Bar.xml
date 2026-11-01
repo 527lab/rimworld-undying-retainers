@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <UR_Settings_BarHeader>家臣在上方殖民者列表的顯示方式：</UR_Settings_BarHeader>
+  <UR_Settings_BarAll>全部顯示</UR_Settings_BarAll>
+  <UR_Settings_BarAllDesc>家臣像一般殖民者一樣顯示在頭像列（原版行為）。家臣很多時頭像列會變得擁擠。</UR_Settings_BarAllDesc>
+  <UR_Settings_BarCombat>僅戰鬥相關時顯示（預設）</UR_Settings_BarCombat>
+  <UR_Settings_BarCombatDesc>平時隱藏家臣；被徵召、倒地、重組中、受傷待治療或精神崩潰時才出現在頭像列。</UR_Settings_BarCombatDesc>
+  <UR_Settings_BarNone>全部隱藏</UR_Settings_BarNone>
+  <UR_Settings_BarNoneDesc>家臣完全不出現在頭像列，請用「不朽家臣」名冊管理。</UR_Settings_BarNoneDesc>
+</LanguageData>
