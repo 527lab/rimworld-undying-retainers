@@ -22,6 +22,9 @@ namespace UndyingRetainers
         public bool householdBond = true;
         public bool masterRescue = true;
         public bool masterDraftFollow = true;
+
+        // v1.2: colonist bar display of retainers. 0 = show all, 1 = only when combat related (default), 2 = hide all.
+        public int retainerBarMode = 1;
         public List<RaisePreset> presets = new List<RaisePreset>();
 
         // Raise profile (P3 skills / work limits), used by the corpse button and the summon window.
@@ -57,6 +60,7 @@ namespace UndyingRetainers
             Scribe_Values.Look(ref householdBond, "householdBond", true);
             Scribe_Values.Look(ref masterRescue, "masterRescue", true);
             Scribe_Values.Look(ref masterDraftFollow, "masterDraftFollow", true);
+            Scribe_Values.Look(ref retainerBarMode, "retainerBarMode", 1);
             Scribe_Collections.Look(ref presets, "presets", LookMode.Deep);
             if (Scribe.mode == LoadSaveMode.PostLoadInit && presets == null)
             {
@@ -95,6 +99,20 @@ namespace UndyingRetainers
             l.CheckboxLabeled("UR_Settings_Bond".Translate(), ref Settings.householdBond, "UR_Settings_BondDesc".Translate());
             l.CheckboxLabeled("UR_Settings_MasterRescue".Translate(), ref Settings.masterRescue, "UR_Settings_MasterRescueDesc".Translate());
             l.CheckboxLabeled("UR_Settings_MasterDraftFollow".Translate(), ref Settings.masterDraftFollow, "UR_Settings_MasterDraftFollowDesc".Translate());
+            l.GapLine();
+            l.Label("UR_Settings_BarHeader".Translate());
+            if (l.RadioButton("UR_Settings_BarAll".Translate(), Settings.retainerBarMode == 0, 12f, "UR_Settings_BarAllDesc".Translate()))
+            {
+                Settings.retainerBarMode = 0;
+            }
+            if (l.RadioButton("UR_Settings_BarCombat".Translate(), Settings.retainerBarMode == 1, 12f, "UR_Settings_BarCombatDesc".Translate()))
+            {
+                Settings.retainerBarMode = 1;
+            }
+            if (l.RadioButton("UR_Settings_BarNone".Translate(), Settings.retainerBarMode == 2, 12f, "UR_Settings_BarNoneDesc".Translate()))
+            {
+                Settings.retainerBarMode = 2;
+            }
             l.End();
         }
 
@@ -105,6 +123,7 @@ namespace UndyingRetainers
             {
                 RetainerUtility.ApplyNeedsToAll();
                 BondUtility.Refresh();
+                RetainerBar.Refresh(true);
             }
         }
     }
@@ -354,12 +373,17 @@ namespace UndyingRetainers
             RetainerUtility.ApplyNeedsToAll();
             MasterBehavior.Reset();
             BondUtility.Refresh();
+            RetainerBar.Refresh(true);
         }
 
         public override void GameComponentTick()
         {
             int now = Find.TickManager.TicksGame;
             MasterBehavior.Tick(now);
+            if (now % 30 == 0)
+            {
+                RetainerBar.Refresh(false);
+            }
             if (now % 250 != 0)
             {
                 return;

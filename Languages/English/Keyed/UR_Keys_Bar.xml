@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <UR_Settings_BarHeader>Show retainers in the colonist bar:</UR_Settings_BarHeader>
+  <UR_Settings_BarAll>Always</UR_Settings_BarAll>
+  <UR_Settings_BarAllDesc>Retainers appear in the colonist bar like normal colonists (vanilla behavior). The bar gets crowded with many retainers.</UR_Settings_BarAllDesc>
+  <UR_Settings_BarCombat>Only when combat related (default)</UR_Settings_BarCombat>
+  <UR_Settings_BarCombatDesc>Hidden normally; shown while drafted, downed, reforming, injured and needing treatment, or in a mental break.</UR_Settings_BarCombatDesc>
+  <UR_Settings_BarNone>Never</UR_Settings_BarNone>
+  <UR_Settings_BarNoneDesc>Retainers never appear in the colonist bar. Manage them from the Undying Retainers roster.</UR_Settings_BarNoneDesc>
+</LanguageData>
