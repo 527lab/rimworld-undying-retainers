@@ -373,12 +373,17 @@ namespace UndyingRetainers
             RetainerUtility.ApplyNeedsToAll();
             MasterBehavior.Reset();
             BondUtility.Refresh();
+            RetainerBar.Refresh(true);
         }
 
         public override void GameComponentTick()
         {
             int now = Find.TickManager.TicksGame;
             MasterBehavior.Tick(now);
+            if (now % 30 == 0)
+            {
+                RetainerBar.Refresh(false);
+            }
             if (now % 250 != 0)
             {
                 return;
